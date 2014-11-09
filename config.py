@@ -63,7 +63,7 @@ def configure(keymap):
         # Escキーが遠すぎるので一応割り当て
         # 本当はVimと同じように imap jk <Esc> したい
         keymap_global[" C-I"] = "Esc"
-        keymap_global[" C-Semicolon"] = "A-F4"
+        keymap_global[" C-Semicolon"] = "S-End", "C-X"
 
         # 単語移動はC+,とC+.に割り当て　なぜかC+<とC+>が設定できない
         # 単語移動便利なのはわかるけどあんまり使えてない
