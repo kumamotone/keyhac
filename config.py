@@ -125,20 +125,20 @@ def configure(keymap):
     # 基本方針は【U0+？ｄ Vimの操作モードと同じ動きをすること】
     # ただ，あんまりVimのキーバインド覚えてないので憶えたやつから
     # 憶えたやつだけ割り当てていく
+    # あと方向キーに関してはC-HJKLで割り当ててるので便利キーにしてる
     # 本当は右手親指とかいう最高な位置にあるので
     # 積極的に色々割り当てていくべきなのだろうが模索中
     
     # 【キー移動】
-    keymap_global["U0-H"] = "Left"
-    keymap_global["U0-J"] = "Down"
-    keymap_global["U0-K"] = "Up"
-    keymap_global["U0-L"] = "Right"
+    keymap_global["U0-H"] = "S-Home"
+    keymap_global["U0-J"] = "Esc"
+    keymap_global["U0-K"] = "S-End", "C-X"
+    keymap_global["U0-L"] = "S-End"
 
-    # 範囲指定する場合
-    keymap_global[ "U0-S-H" ] = "S-Left"
-    keymap_global[ "U0-S-J" ] = "S-Down"
-    keymap_global[ "U0-S-K" ] = "S-Up"
-    keymap_global[ "U0-S-L" ] = "S-Right"
+    keymap_global[ "U0-S-H" ] = "C-S-Tab"
+    keymap_global[ "U0-S-J" ] = "A-Left"
+    keymap_global[ "U0-S-K" ] = "A-Right"
+    keymap_global[ "U0-S-L" ] = "C-Tab"
 
     # 【単語移動】
     keymap_global["U0-W"] = "C-Right"
