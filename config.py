@@ -151,11 +151,11 @@ def configure(keymap):
     # 【ペースト】
     # もっと便利に使えそうだからもっと慎重に割り当てるべきかもだけど一応暫定的に
     # C-Vは文脈によっては結構押しづらいし
-    keymap_global["U0-P"] = "C-V"
+    keymap_global["U0-P"] = "Up", "End", "Enter", "C-V"
 
     # 【Vimのdd dwが使いたくてマップ　割と強力】
     keymap_global["U0-D"] = keymap.defineMultiStrokeKeymap("U0-D")
-    keymap_global["U0-D"]["U0-D"]  = "Home", "S-End", "C-X"
+    keymap_global["U0-D"]["U0-D"]  = "Home", "S-End", "C-X", "Back"
     keymap_global["U0-D"]["U0-W"]  = "C-S-Right", "C-X"
     keymap_global["U0-D"]["U0-B"]  = "C-S-Left", "C-X"
     
