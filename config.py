@@ -130,15 +130,15 @@ def configure(keymap):
     # 積極的に色々割り当てていくべきなのだろうが模索中
     
     # 【キー移動】
-    keymap_global["U0-H"] = "S-Home"
+    keymap_global["U0-H"] = "Home"
     keymap_global["U0-J"] = "Esc"
     keymap_global["U0-K"] = "S-End", "C-X"
-    keymap_global["U0-L"] = "S-End"
+    keymap_global["U0-L"] = "End"
 
-    keymap_global[ "U0-S-H" ] = "C-S-Tab"
-    keymap_global[ "U0-S-J" ] = "A-Left"
-    keymap_global[ "U0-S-K" ] = "A-Right"
-    keymap_global[ "U0-S-L" ] = "C-Tab"
+    keymap_global[ "U0-S-H" ] = "S-Home"
+    keymap_global[ "U0-S-J" ] = "C-S-Tab"
+    keymap_global[ "U0-S-K" ] = "C-Tab"
+    keymap_global[ "U0-S-L" ] = "S-End"
 
     # 【単語移動】
     keymap_global["U0-W"] = "C-Right"
