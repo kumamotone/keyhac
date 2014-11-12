@@ -174,7 +174,6 @@ def configure(keymap):
 
     keymap_global["C-U0-E"] = "Win-E"
     keymap_global["C-U0-D"] = "Win-D"
-    keymap_global["C-U0-L"] = "Win-L"
     keymap_global["C-U0-R"] = "Win-R"
 	
 	# ExplorerでCtrl+Mでフォルダを開こうとするとCtrlキーが押されてるからって
