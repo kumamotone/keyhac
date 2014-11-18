@@ -24,10 +24,8 @@ def configure(keymap):
     # 2. Windows のControlマッピングは貧弱なので，Mac(Emacs)風にカスタマイズしなおす（ただし，一部Vimっぽいマッピング)
     
     # 【補足事項】
-    # ひらがなキー（RCtrl)は，使用頻度は少ないけど，
-    # モディファイアとして使用したいので
-    # ひらがなキーはレジストリでRCtrlに割り当てることを想定しています．
-	
+    # CapsLockキーは，そこそこ良い所にあるキーなのでモディファイアとして使用したい
+    # しかしながらCapsLockはKeyhacだけだとうまくモディファイできないので一旦レジストリで右Ctrlになっていることを想定しています
     # 本来のショートカットであるC-?を潰すとたまに面倒くさいことになるので，
     # それらはLC-RC-?で呼び出せるようにしておきます
 
@@ -35,7 +33,8 @@ def configure(keymap):
     keymap_global["O-LCtrl"] = "(29)"
     keymap.replaceKey("(28)", "LShift")
     keymap_global["O-LShift"] = "(28)"
-
+    keymap_global["O-RCtrl"] = "Back"
+    
     #keymap_global("RCtrl", "User0")
     #keymap.defineModifier("242", "User0")
     #keymap_global["O-RCtrl"] = "(240)"
@@ -136,15 +135,10 @@ def configure(keymap):
     # 【単語移動】
     keymap_global["RC-W"] = "C-Right"
     keymap_global["RC-B"] = "C-Left"
-
-    # アンドゥ あんまいらんかも
-    keymap_global["RC-U"] = "C-Z"
     
     # 【ペースト】
     # もっと便利に使えそうだからもっと慎重に割り当てるべきかもだけど一応暫定的に
-    # C-Vは文脈によっては結構押しづらいし
-    keymap_global["RC-P"] = "C-V"
-    keymap_global["RC-S-P"] = "Up", "End", "Enter", "C-V"
+    # keymap_global["RC-S-P"] = "Up", "End", "Enter", "C-V"
 
     # 【Vimのdd dwが使いたくてマップ　これは割と強力だと思う】
     keymap_global["RC-D"] = keymap.defineMultiStrokeKeymap("RC-D")
