@@ -101,6 +101,12 @@ def configure(keymap):
     keymap_global[ "LC-M" ] = "Enter"
     keymap_global[ "LC-RC-S-M" ] = "C-M"
     
+    # 【Escキー】
+    # 最初は自分のvimの設定とと同じように imap jk <Esc> (素早くjkと入力するとEscキーになる)
+    # を割り当てたいと思ったのだが，なかなか設定がややこしそうなので断念
+    # しかしC-S-Fもかなり押しやすく便利
+    keymap_global["C-S-F"] = "Esc"
+
     # 【Alt-F4(ウィンドウを閉じる)】
     # C-Wが多くのアプリケーションで「閉じる」「タブを閉じる」に割り当てられているので，
     # C-S-WがAlt+F4なのは割と直感的かなと思い割り当て
